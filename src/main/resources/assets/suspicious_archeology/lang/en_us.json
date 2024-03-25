@@ -1,4 +1,6 @@
 {
   "item.suspicious_archeology.shanor": "Shanor",
-  "item.suspicious_archeology.shanor_crumbs": "Shanor Crumbs"
+  "item.suspicious_archeology.shanor_crumbs": "Shanor Crumbs",
+
+  "creativetab.archeology_tab": "Suspicious Archeology Tab"
 }

@@ -1,6 +1,7 @@
 package de.amirs.suspiciousArcheology;
 
 import com.mojang.logging.LogUtils;
+import de.amirs.suspiciousArcheology.extra.ModCreativeModeTabs;
 import de.amirs.suspiciousArcheology.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -24,6 +25,7 @@ public class SuspiciousArcheologyMod {
     public SuspiciousArcheologyMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -37,10 +39,12 @@ public class SuspiciousArcheologyMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        /*
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.SHANOR);
             event.accept(ModItems.SHANOR_CRUMBS);
         }
+         */
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
